@@ -1,0 +1,9 @@
+#usersSelected {
+  display: flex;
+  gap: 10px;
+}
+#usersSelected span {
+  background-color: #00f;
+  border-radius: 5px;
+  padding: 4px 12px;
+}/*# sourceMappingURL=users.css.map */

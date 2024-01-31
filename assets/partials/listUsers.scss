@@ -1,0 +1,48 @@
+#listUsersArea {
+  border-radius: 20px;
+  padding: 20px 0;
+  background: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 80px;
+  li {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #000;
+    border-radius: 10px;
+    gap: 10px;
+  }
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  button {
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    padding: 4px;
+    transition: 0.3s;
+    background: #123898a1;
+  }
+  button:hover {
+    cursor: pointer;
+    background: rgba(0 0 0 / 40%);
+  }
+  .select {
+    background-color: #f00;
+  }
+  span:hover {
+    text-decoration: underline;
+  }
+}

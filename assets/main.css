@@ -1,0 +1,52 @@
+
+#listUsersArea {
+  background: #e1dd8f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+#listUsersArea li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#listUsersArea h3 {
+  font-size: 1.4rem;
+}
+#listUsersArea button {
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  padding: 4px;
+  transition: 0.3s;
+}
+#listUsersArea button:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+}
+#listUsersArea span {
+  color: rgb(4, 73, 235);
+  cursor: pointer;
+}
+#listUsersArea span:hover {
+  text-decoration: underline;
+}
+
+#usersSelected {
+  background-color: #00f;
+  border-radius: 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}/*# sourceMappingURL=main.css.map */
