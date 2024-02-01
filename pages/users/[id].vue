@@ -12,9 +12,9 @@
       <p v-email>{{ users.email }}</p>
       <button
         class="mt-10 bg-[#f0f] w-full py-2 rounded-xl font-bold uppercase opacity-80 shadow-md shadow-white hover:opacity-100 transition-all duration-300"
-        @click="loginUser(fullName)"
+        @click="LoginLogout"
       >
-        Logar
+        {{ isLogged }}
       </button>
     </div>
   </div>
@@ -33,6 +33,18 @@ const { getUsers } = usersInfo;
 const { users } = storeToRefs(usersInfo);
 
 const { loginUser } = userLoginStore;
+const { loggedUsers } = storeToRefs(userLoginStore);
+
+const logged = ref(false);
+
+const LoginLogout = () => {
+  verifyLogged() ? (logged.value = true) : (logged.value = false);
+  loginUser(fullName.value);
+};
+
+const verifyLogged = () => {
+  return loggedUsers.value.includes(fullName.value);
+};
 
 onMounted(async () => {
   await getUsers(`id=${id.toString()}`);
@@ -41,4 +53,6 @@ onMounted(async () => {
 const fullName = computed(
   () => `${users.value.first_name} ${users.value.last_name}`
 );
+
+const isLogged = computed(() => (verifyLogged() ? "Deslogar" : "Logar"));
 </script>

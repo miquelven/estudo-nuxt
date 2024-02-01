@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gray-700/40">
+  <header class="bg-gray-700/40 flex flex-col">
     <div
       class="flex w-full m-auto justify-between px-4 py-5 item-center md:max-w-screen-lg"
     >
@@ -13,6 +13,7 @@
         </option>
         <option class="bg-gray-700/40 text-white" value="en">en</option>
       </select>
+
       <nav class="flex items-center gap-10">
         <NuxtLink
           v-for="(route, index) in routes"
@@ -31,15 +32,11 @@
             aria-label="Theme"
             @click="isDark = !isDark"
           />
-          <template #fallback>
-            <div class="w-8 h-8" />
-          </template>
+          <template #fallback> </template>
         </ClientOnly>
       </nav>
     </div>
-    <p class="max-w-screen-lg mx-auto text-white/40">
-      Quantidade de usuários logados: {{ qtdLoggedUsers }}
-    </p>
+    <h4>Quantidade de usuários logados: {{ qtdLoggedUsers }}</h4>
   </header>
 </template>
 

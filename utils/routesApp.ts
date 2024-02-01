@@ -7,7 +7,7 @@ export default () => {
   const routes: Routes[] = [
     { name: "Home", path: "/" },
     { name: "Users", path: "/users" },
-    { name: "Fetch", path: "/fetch" },
+    { name: "UsersLogged", path: "/userslogged" },
   ];
 
   return { routes };

@@ -33,10 +33,10 @@ export const useLogin = defineStore(
     const loggedUsers = ref<string[]>([]);
 
     const loginUser = (nameUser: string) => {
-      if (loggedUsers.value.includes(nameUser))
-        return loggedUsers.value.splice(1, [
-          loggedUsers.value.indexOf(nameUser),
-        ]);
+      if (loggedUsers.value.includes(nameUser)) {
+        loggedUsers.value = loggedUsers.value.filter((l) => l !== nameUser);
+        return;
+      }
 
       loggedUsers.value.push(nameUser);
     };
