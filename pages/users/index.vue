@@ -42,7 +42,6 @@ const nuxtApp = useNuxtApp();
 
 onMounted(() => {
   // if (users.value.length > 0) return;
-  console.log(users.value);
   getUsers("delay=1");
   //toast error modificado
   // nuxtApp.$toast.error("Erro na aplicação");

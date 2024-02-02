@@ -14,10 +14,10 @@
   />
 </template>
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 const useLoginStore = useLogin();
 
 const { locale } = useI18n();
 
 const { qtdLoggedUsers } = storeToRefs(useLoginStore);
-</script>
+</script> -->
